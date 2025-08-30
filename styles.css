@@ -1151,6 +1151,18 @@ section.page-header.products-header {
 .portfolio21 { background: url('images/portfolio21.jpeg') !important; background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; }
 .portfolio22 { background: url('images/portfolio22.jpeg') !important; background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; }
 
+/* New Portfolio Images (23-35) */
+.portfolio-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-img {
+    transform: scale(1.05);
+}
+
 .portfolio-overlay {
     position: absolute;
     top: 0;
@@ -1249,6 +1261,88 @@ section.page-header.products-header {
 
 .detail-value {
     color: var(--primary-color);
+}
+
+/* Video Gallery */
+.video-gallery {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.video-gallery .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.video-gallery .section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.video-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.3s ease;
+}
+
+.video-item:hover {
+    transform: translateY(-10px);
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.portfolio-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.video-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(26, 95, 58, 0.9));
+    color: var(--white);
+    padding: 2rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.video-item:hover .video-overlay {
+    transform: translateY(0);
+}
+
+.video-overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.video-overlay p {
+    opacity: 0.9;
+    font-size: 0.95rem;
 }
 
 /* Testimonials */
@@ -3123,4 +3217,66 @@ section.page-header.products-header {
 .contact-content .contact-info-section:hover {
     box-shadow: 0 12px 40px rgba(26, 95, 58, 0.15);
     border-color: rgba(74, 222, 128, 0.2);
+}
+
+/* Responsive Styles for Video Gallery */
+@media (max-width: 768px) {
+    .video-gallery .section-title {
+        font-size: 2rem;
+    }
+    
+    .video-gallery .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .video-item {
+        margin: 0 1rem;
+    }
+    
+    .video-overlay {
+        padding: 1.5rem;
+    }
+    
+    .video-overlay h3 {
+        font-size: 1.3rem;
+    }
+    
+    .video-overlay p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-gallery {
+        padding: 60px 0;
+    }
+    
+    .video-gallery .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .video-grid {
+        gap: 1.5rem;
+    }
+    
+    .video-item {
+        margin: 0 0.5rem;
+    }
+    
+    .video-overlay {
+        padding: 1rem;
+    }
+    
+    .video-overlay h3 {
+        font-size: 1.2rem;
+    }
+    
+    .video-overlay p {
+        font-size: 0.85rem;
+    }
 }
