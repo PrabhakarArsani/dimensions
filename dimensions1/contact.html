@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Dimensions Doors and Windows Systems</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="dual-logo-container">
+                    <div class="main-logo">
+                        <img src="images/logo.jpg" alt="Dimensions Logo" class="logo">
+                    </div>
+                    <div class="sudhakar-logo-container">
+                        <div class="sudhakar-logo-flip">
+                            <div class="sudhakar-logo-front">
+                                <img src="images/sudhakar_logo.png" alt="Sudhakar Logo" class="logo">
+                            </div>
+                            <div class="sudhakar-logo-back">
+                                <img src="images/sudhakar_logo.png" alt="Sudhakar Logo" class="logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html" class="nav-link">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with us for your door and window requirements</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h2>Send us a Message</h2>
+                    <form class="contact-form" id="contactForm" onsubmit="sendToWhatsApp(event)">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Company (Optional)</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="project-type">Project Type</label>
+                            <select id="project-type" name="project-type">
+                                <option value="">Select Project Type</option>
+                                <option value="residential">Residential</option>
+                                <option value="commercial">Commercial</option>
+                                <option value="industrial">Industrial</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="product-interest">Product Interest</label>
+                            <select id="product-interest" name="product-interest">
+                                <option value="">Select Product</option>
+                                <option value="upvc-windows">uPVC Windows</option>
+                                <option value="upvc-doors">uPVC Doors</option>
+                                <option value="aluminium-windows">Aluminium Windows</option>
+                                <option value="aluminium-doors">Aluminium Doors</option>
+
+                                <option value="sliding-systems">Sliding Systems</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project requirements..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="contact-info-section">
+                    <h2>Get in Touch</h2>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p>+91 9390115722</p>
+                                <p>+91 9390115723</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>info@dimensions.com</p>
+                                <p>sales@dimensions.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h4>Address</h4>
+                                <p>Dimensions Doors and Windows Systems</p>
+                                <p>Plot No. 559, Sri Ramana Colony, Phase 2</p>
+                                <p>Hastinapuram, L.B Nagar, Hyderabad-500079</p>
+                                <p>India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">🕒</div>
+                            <div class="contact-details">
+                                <h4>Business Hours</h4>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                <p>Saturday: 9:00 AM - 4:00 PM</p>
+                                <p>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Our Location</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.7012764945903!2d78.54288319999999!3d17.3299564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba314f34e4a15%3A0xf9c157f8d90b0be!2sDimensions%20Doors%20%26%20Windows%20Systems!5e0!3m2!1sen!2sin!4v1755858068962!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What is the warranty period for your products?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide a comprehensive warranty of 10 years on our uPVC systems and 15 years on aluminium systems, covering manufacturing defects and material quality.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you provide installation services?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we provide professional installation services by our certified technicians. Installation is included in our project quotes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How long does it take to complete a project?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Project timelines vary based on scope and complexity. Residential projects typically take 2-4 weeks, while commercial projects may take 4-8 weeks.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you offer free site visits and quotations?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we provide free site visits and detailed quotations. Our team will assess your requirements and provide a comprehensive proposal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo-container">
+                        <div class="logo-flip">
+                            <div class="logo-front">
+                                <img src="images/logo.jpg" alt="Dimensions Logo" class="logo">
+                            </div>
+                            <div class="logo-back">
+                                <img src="images/sudhakar_logo.png" alt="Sudhakar Logo" class="logo">
+                            </div>
+                        </div>
+                    </div>
+                    <p>Leading manufacturer of uPVC and Aluminium profile systems for doors and windows.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                                    <div class="footer-section">
+                        <h4>Contact Info</h4>
+                        <p>📞 +91 9390115722</p>
+                        <p>📞 +91 9390115723</p>
+                        <p>📧 info@dimensions.com</p>
+                        <p>📍 Plot No. 559, Sri Ramana Colony, Phase 2, Hastinapuram, L.B Nagar, Hyderabad-500079</p>
+                    </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with latest news and offers!</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dimensions Doors and Windows Systems. All Rights Reserved. | <a href="https://www.yuvisoft.in" target="_blank" style="color: var(--secondary-color); text-decoration: none;">Yuvisoft</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

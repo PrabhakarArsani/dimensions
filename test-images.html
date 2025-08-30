@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Test</title>
+    <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .image-test { margin: 20px 0; padding: 10px; border: 1px solid #ccc; }
+        img { max-width: 300px; height: auto; border: 1px solid #ddd; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <h1>Image Loading Test</h1>
+    
+    <div class="image-test">
+        <h3>Test 1: 2-Track-2-Panel-nomesh.png</h3>
+        <img src="images/2-Track-2-Panel-nomesh.png" alt="Test 1" onload="this.nextElementSibling.textContent='✅ Loaded successfully'" onerror="this.nextElementSibling.textContent='❌ Failed to load'">
+        <p class="status">Loading...</p>
+    </div>
+
+    <div class="image-test">
+        <h3>Test 2: 2-Track-3-Panel-no-mesh.png</h3>
+        <img src="images/2-Track-3-Panel-no-mesh.png" alt="Test 2" onload="this.nextElementSibling.textContent='✅ Loaded successfully'" onerror="this.nextElementSibling.textContent='❌ Failed to load'">
+        <p class="status">Loading...</p>
+    </div>
+
+    <div class="image-test">
+        <h3>Test 3: Casement-Double-Openable-Inward-Outward.png</h3>
+        <img src="images/Casement-Double-Openable-Inward-Outward.png" alt="Test 3" onload="this.nextElementSibling.textContent='✅ Loaded successfully'" onerror="this.nextElementSibling.textContent='❌ Failed to load'">
+        <p class="status">Loading...</p>
+    </div>
+
+    <div class="image-test">
+        <h3>Test 4: Casement-Single-Openable-Inward-Outward.png</h3>
+        <img src="images/Casement-Single-Openable-Inward-Outward.png" alt="Test 4" onload="this.nextElementSibling.textContent='✅ Loaded successfully'" onerror="this.nextElementSibling.textContent='❌ Failed to load'">
+        <p class="status">Loading...</p>
+    </div>
+
+    <div class="image-test">
+        <h3>Test 5: Double-openable-middle-fixed.png</h3>
+        <img src="images/Double-openable-middle-fixed.png" alt="Test 5" onload="this.nextElementSibling.textContent='✅ Loaded successfully'" onerror="this.nextElementSibling.textContent='❌ Failed to load'">
+        <p class="status">Loading...</p>
+    </div>
+
+    <div class="image-test">
+        <h3>Test 6: Fixed.png</h3>
+        <img src="images/Fixed.png" alt="Test 6" onload="this.nextElementSibling.textContent='✅ Loaded successfully'" onerror="this.nextElementSibling.textContent='❌ Failed to load'">
+        <p class="status">Loading...</p>
+    </div>
+
+    <div class="image-test">
+        <h3>Test 7: Tilt-and-Turn.png</h3>
+        <img src="images/Tilt-and-Turn.png" alt="Test 7" onload="this.nextElementSibling.textContent='✅ Loaded successfully'" onerror="this.nextElementSibling.textContent='❌ Failed to load'">
+        <p class="status">Loading...</p>
+    </div>
+
+    <div class="image-test">
+        <h3>Test 8: Top-Hung.png</h3>
+        <img src="images/Top-Hung.png" alt="Test 8" onload="this.nextElementSibling.textContent='✅ Loaded successfully'" onerror="this.nextElementSibling.textContent='❌ Failed to load'">
+        <p class="status">Loading...</p>
+    </div>
+
+    <div class="image-test">
+        <h3>Test 9: parellel-window.png</h3>
+        <img src="images/parellel-window.png" alt="Test 9" onload="this.nextElementSibling.textContent='✅ Loaded successfully'" onerror="this.nextElementSibling.textContent='❌ Failed to load'">
+        <p class="status">Loading...</p>
+    </div>
+</body>
+</html> 
