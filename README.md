@@ -5,7 +5,7 @@ A modern, responsive website for Dimensions Doors and Windows Systems, a leading
 ## 🌟 Features
 
 ### Design & Branding
-- **Logo Flip Animation**: Interactive logo that flips between Dimensions and Sudhakar logos on hover
+- **Logo Flip Animation**: Interactive logo that flips between Dimensions and Sudhakar uPVC logos on hover
 - **Brand Colors**: Uses logo-inspired color scheme (Deep Blue, Gold/Amber, Red accents)
 - **Modern UI/UX**: Clean, professional design with smooth animations
 - **Responsive Design**: Fully responsive across all devices
@@ -48,7 +48,7 @@ dimensions/
 ├── script.js           # JavaScript functionality
 ├── images/
 │   ├── logo.jpg        # Dimensions logo
-│   └── sudhakar_logo.png # Sudhakar logo
+│   └── sudhakar_logo.png # Sudhakar uPVC logo
 └── README.md           # This file
 ```
 
@@ -112,7 +112,7 @@ The logo flip animation is controlled by CSS transforms. To modify:
 
 The website includes the following contact details:
 - **Phone**: +91 9390115722, +91 9390115723
-- **Email**: info@dimensions.com
+- **Email**: upender@dimensionsdoorsandwindowsystems.in
 - **Address**: Plot No. 559, Sri Ramana Colony, Phase 2, Hastinapuram, L.B Nagar, Hyderabad-500079
 
 ## 🛠️ Browser Support
@@ -133,7 +133,7 @@ This is a client project for Dimensions Doors and Windows Systems. For modificat
 ## 📞 Support
 
 For technical support or questions about the website:
-- Email: info@dimensions.com
+- Email: upender@dimensionsdoorsandwindowsystems.in
 - Phone: +91 9390115722, +91 9390115723
 
 ---

@@ -111,18 +111,40 @@ const filterButtons = document.querySelectorAll('.filter-btn');
 if (filterButtons.length > 0) {
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove active class from all filter buttons in the same section
-            const filterSection = button.closest('.filter-options');
-            filterSection.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            // Remove active class from all filter buttons with the same data-filter value
+            const filterValue = button.getAttribute('data-filter');
+            document.querySelectorAll(`.filter-btn[data-filter="${filterValue}"]`).forEach(btn => {
+                btn.classList.remove('active');
+            });
             
-            // Add active class to clicked button
-            button.classList.add('active');
+            // Add active class to clicked button and all buttons with same filter value
+            document.querySelectorAll(`.filter-btn[data-filter="${filterValue}"]`).forEach(btn => {
+                btn.classList.add('active');
+            });
             
             // Get the filter value
             const filter = button.getAttribute('data-filter');
             
-            // Find the product grid in the same section
-            const productGrid = button.closest('.series-content-wrapper').querySelector('.product-grid');
+            // Find the product grid - handle both mobile and desktop scenarios
+            let productGrid;
+            const seriesContentWrapper = button.closest('.series-content-wrapper');
+            if (seriesContentWrapper) {
+                // Desktop scenario
+                productGrid = seriesContentWrapper.querySelector('.product-grid');
+            } else {
+                // Mobile scenario - find the product grid in the same sliding content section
+                // Check for all possible sliding content classes
+                const slidingContent = button.closest('.sliding-content, .prima-sliding-content, .royal-sliding-content');
+                if (slidingContent) {
+                    productGrid = slidingContent.querySelector('.product-grid');
+                }
+            }
+            
+            if (!productGrid) {
+                console.error('Product grid not found');
+                return;
+            }
+            
             const allProductCards = productGrid.querySelectorAll('.product-card');
             
             // Hide all product cards first
@@ -650,7 +672,7 @@ Thank you for visiting our website. We specialize in premium uPVC and Aluminium 
 For any inquiries, please contact us:
 📞 +91 9390115722
 📞 +91 9390115723
-📧 info@dimensions.com
+📧 upender@dimensionsdoorsandwindowsystems.in
 
 Website developed with ❤️ for quality door and window solutions.
 `); 
